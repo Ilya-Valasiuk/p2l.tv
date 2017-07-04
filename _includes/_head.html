@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,600,700" rel="stylesheet">
+    <link href="assets/stylesheet/style.css" rel="stylesheet">
+
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+    
+    <!-- add google maps-->
+    <script type="text/javascript">
+
+
+        function init() {
+            var mapOptions = {
+                zoom: 11,
+                center: new google.maps.LatLng(-33.91721, 151.22630), // New York
+                styles: [ { "featureType": "administrative", "elementType": "labels.text.fill", "stylers": [ { "color": "#444444" } ] }, { "featureType": "landscape", "elementType": "all", "stylers": [ { "color": "#f2f2f2" } ] }, { "featureType": "poi", "elementType": "all", "stylers": [ { "visibility": "off" } ] }, { "featureType": "road", "elementType": "all", "stylers": [ { "saturation": -100 }, { "lightness": 45 } ] }, { "featureType": "road.highway", "elementType": "all", "stylers": [ { "visibility": "simplified" } ] }, { "featureType": "road.arterial", "elementType": "labels.icon", "stylers": [ { "visibility": "off" } ] }, { "featureType": "transit", "elementType": "all", "stylers": [ { "visibility": "off" } ] }, { "featureType": "water", "elementType": "all", "stylers": [ { "color": "#0bd0d9" }, { "visibility": "on" } ] } ]
+            };
+
+            var mapElement = document.getElementById('map');
+            var map = new google.maps.Map(mapElement, mapOptions);
+
+            var locations = [
+                {
+                    position: new google.maps.LatLng(-33.91721, 151.22630),
+                    title: "location1"
+                },
+                {
+                    position: new google.maps.LatLng(-33.92539, 152.22820),
+                    title:"lacation 2"
+                },
+                {
+                    position: new google.maps.LatLng(-34.91747, 150.22912),
+                    type: 'lacation3'
+                }
+            ];
+
+            // Create markers.
+            locations.forEach(function(location) {
+                var marker = new google.maps.Marker({
+                    position: location.position,
+                    icon: './assets/img/marker.svg',
+                    map: map,
+                    title: location.title
+                });
+            });
+
+        }
+    </script>
+
+
+
+
+
+</head>
+
+<body>
