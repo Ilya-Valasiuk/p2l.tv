@@ -3,7 +3,7 @@
  ********************************/
 
 .join-team {
-    background: url('../img/join-team.jpg');
+    background: url('../img/join-team.png');
     background-size: cover;
     background-position: center;
     z-index: 0;
@@ -253,7 +253,6 @@
         margin: 0;
 
         &__block {
-            margin: 60px 90px 50px;
             display: flex;
             flex-direction: column
         }

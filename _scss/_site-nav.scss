@@ -15,7 +15,7 @@
     z-index: 100;
     padding: 20px 0;
 
-    &--scrolled{
+    &--scrolled {
         background: rgba(0,0,0,0.9);
     }
 
@@ -258,6 +258,7 @@
     .site-nav {
 
         padding: 55px 0;
+        transition: all 0.5s ease-out;
 
         &__trigger {
             display: none;
@@ -284,6 +285,11 @@
             font-weight: 300;
             text-decoration: none;
             text-transform: uppercase;
+            transition: color 0.5s ease-out;
+        }
+
+        .site-nav__logo-img path {
+            transition: fill 0.5s ease-out;
         }
     }
 
@@ -295,7 +301,9 @@
      ************************************/
 
 
-    .site-nav[data-section='header'] {
+    .site-nav[data-for-id='1'] {
+
+        visibility: visible;
 
         .language__item {
             border: 1px solid $headerTextColor;
@@ -321,7 +329,9 @@
      ************************************/
 
 
-    .site-nav[data-section='info'] {
+    .site-nav[data-for-id='2'] {
+
+        visibility: visible;
 
         .site-nav__logo-img path {
             fill: $logoColor;
@@ -354,8 +364,10 @@
     /************************************
      *   styles for join navigation
      ************************************/
+    .site-nav[data-for-id='3'],
+    .site-nav[data-for-id='4'] {
 
-    .site-nav[data-section='join'] {
+        visibility: visible;
 
         .site-nav__logo-img path {
             fill: $joinTextColor;
@@ -388,10 +400,11 @@
      *   styles for map navigation
      ************************************/
 
-    .site-nav[data-section='map'] {
+    .site-nav[data-for-id='5'] {
 
         transform: translateZ(-5em);
         background-color: rgba(255,255,255, 0.85);
+        visibility: visible;
 
         .site-nav__logo-img path {
             fill: $mapTextColor;
@@ -417,6 +430,11 @@
         .site-nav__link:hover {
             border-bottom-color: $mapTextColor;
         }
+    }
+
+
+    .site-nav[data-for-id='6'] {
+        visibility: hidden;
     }
 
     .footer-nav {
