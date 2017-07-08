@@ -1,0 +1,328 @@
+/********************************
+ *    sign-up
+ ********************************/
+
+.sign-up {
+    width: 100%;
+    position: relative;
+    padding: 65px 25px 80px;
+    color: $headerTextColor;    
+    background: url('../img/sign-up.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+
+    &:before {
+        content: "";
+        position: absolute;       
+        background: #000;
+        opacity: 0.7;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -1;      
+    }
+
+    &__headline {
+        font-size: 26px;
+        line-height: 40px;
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
+
+    &__copy {
+        margin-bottom: 30px;
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    &__input {
+        width: 100%;
+        padding: 20px 0;
+        margin-bottom: 50px;
+        font-size: 16px;
+        color: $headerTextColor;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid $headerTextColor;
+        font-family: 'Fira Sans', sans-serif;
+
+        &::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__button {
+        box-sizing: border-box;
+        padding: 16px 55px 14px;
+        font-size: 16px;
+        text-align: center;
+        text-transform: uppercase;
+        background-color: transparent;
+        border-radius: 30px;
+        border: 1px solid $headerTextColor;
+        color: $headerTextColor;
+    }
+
+    form {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+/********************************
+ *    footer
+ ********************************/
+
+.footer {
+    background: $footerBGColor;
+    color: $headerTextColor;
+    padding: 50px 0 45px;
+
+    &__container {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    &__copyrating {
+        margin-top: 60px;
+        font-size: 16px;
+        font-weight: 300;
+    }
+
+    .facebook-icon {
+        background: url('../img/light-facebook.svg');
+    }
+    .twitter-icon {
+        background: url('../img/light-twitter.svg');
+    }
+    .in-icon {
+        background: url('../img/light-in.svg');
+    }
+}
+
+
+/************************************************
+ *      Styles fo width: 640px
+ ************************************************/
+
+@media only screen and (min-width: $medium) {
+
+    .sign-up {
+
+        &__headline {
+            font-size: 30px;
+            line-height: 40px;
+            font-weight: 500;
+        }
+
+        &__copy {
+            font-size: 18px;
+            line-height: 30px;
+        }
+
+        &__input {
+            width: 335px;
+            padding: 20px 0;
+            margin-right: 30px;
+            font-size: 16px;
+            color: $headerTextColor;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid $headerTextColor;
+            font-family: 'Fira Sans', sans-serif;
+
+            &::placeholder {
+                color: rgba(255, 255, 255, 0.5);
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        &__button {
+            box-sizing: border-box;
+            width: 245px;
+            padding: 20px 0 18px;
+            font-size: 20px;
+            text-align: center;
+            text-transform: uppercase;
+            background-color: transparent;
+            border-radius: 30px;
+            border: 1px solid $headerTextColor;
+            color: $headerTextColor;
+
+        }
+
+        form {
+            width: inherit;
+        }
+    }
+
+    .footer {
+        background: $footerBGColor;
+        color: $headerTextColor;
+        padding: 35px 0;
+
+        &__copyrating {
+            margin-top: 30px;
+        }
+
+    }
+
+}
+
+
+/************************************************
+ *      Styles fo width: 1024px
+ ************************************************/
+
+@media only screen and (min-width: $large) {
+
+    .sign-up-wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .sign-up {
+        width: 100%;
+        height: 295px;
+        position: relative;
+        padding: 65px 0 80px;
+        color: $headerTextColor;
+        z-index: 1;
+
+
+        &__headline {
+            font-size: 30px;
+            line-height: 40px;
+            font-weight: 500;
+            margin-bottom: 0;
+        }
+
+        &__copy {
+            font-size: 18px;
+            line-height: 30px;
+            margin-bottom: 0;
+
+        }
+
+        &__input {
+            width: 335px;
+            padding: 20px 0;
+            margin-right: 30px;
+            margin-bottom: 0;
+            font-size: 16px;
+            color: $headerTextColor;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid $headerTextColor;
+            font-family: 'Fira Sans', sans-serif;
+
+            &::placeholder {
+                color: rgba(255, 255, 255, 0.5);
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        &__button {
+            box-sizing: border-box;
+            width: 245px;
+            padding: 20px 0 18px;
+            font-size: 20px;
+            text-align: center;
+            text-transform: uppercase;
+            background-color: transparent;
+            border-radius: 30px;
+            border: 1px solid $headerTextColor;
+            color: $headerTextColor;
+
+        }
+
+
+        form {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-left: 20px;
+            width: inherit;
+        }
+
+    }
+
+
+    .footer {
+        background: $footerBGColor;
+        color: $headerTextColor;
+        padding: 65px 0 45px;
+
+        &__container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 25px;
+        }
+
+        &__copyrating {
+            margin-top: 0;
+            font-size: 16px;
+            font-weight: 300;
+        }
+
+        .facebook-icon {
+            background: url('../img/light-facebook.svg');
+        }
+
+        .twitter-icon {
+            background: url('../img/light-twitter.svg');
+        }
+
+        .in-icon {
+            background: url('../img/light-in.svg');
+        }
+    }
+}
+
+
+/************************************************
+ *      Styles fo width: 1024px
+ ************************************************/
+
+@media only screen and (min-width: $large2x) {
+
+    .sign-up form {
+        width: initial;
+    }
+    .sign-up {
+        &__text {
+            width: 370px;
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+
+

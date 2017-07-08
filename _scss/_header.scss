@@ -1,0 +1,142 @@
+.header {
+    background: url('../img/header-mobile.jpg');
+    background-size: cover;
+    background-position: center;
+    padding-top: 79px;
+    padding-bottom: 25px;
+    z-index: 1;
+    color: $headerTextColor;
+
+    &:before {
+        content: "";
+        position: absolute;
+        background: rgba(0,0,0,0.7);
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+    }
+}
+
+.header {
+
+    &__body {
+        margin-top: 125px;
+    }
+
+    &__text {
+        font-size: 26px;
+        font-weight: 100;
+        line-height: 150%;
+        text-align: center;
+
+        span {
+            display: block;
+        }
+    }
+
+    &__more-info {
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        margin: 60px auto 0;
+        padding: 16px 20px 14px;
+        text-align: center;
+        font-size: 16px;
+        color: #fff;
+        text-transform: uppercase;
+        border: 1px solid #fff;
+        border-radius: 25px;
+    }
+
+    &__scroll {
+        margin-top: 158px;
+        display: block;
+        text-align: center;
+        font-size: 12px;
+        color: #fff;
+
+        &:after {
+            content: "";
+            display: block;
+            margin: 7px auto 0;
+            width: 18px;
+            height: 7px;
+            background: url(../img/scroll-more.svg);
+            background-size: cover;
+        }
+    }
+}
+
+
+/************************************************
+ *      Styles fo width: 640px
+ ************************************************/
+
+@media only screen and (min-width: $medium) {
+
+    .header {
+        background: url('../img/header.jpg');
+        background-size: cover;
+        background-position: center;
+        //padding: 40px 45px;
+        padding-bottom: 35px;
+
+        &__body {
+            margin-top: 100px;
+        }
+
+        &__text {
+            font-weight: 300;
+            font-size: 50px;
+            line-height: 75px;
+        }
+
+        &__more-info {
+            width: 340px;
+            padding: 22px 20px 20px;
+            font-size: 20px;
+            border-radius: 30px;
+        }
+
+        &__scroll {
+            font-size: 18px;
+
+            &:after {
+                margin: 10px auto 0;
+                width: 30px;
+                height: 10px;
+
+            }
+        }
+    }
+}
+
+
+/************************************************
+ *      Styles fo width: 1024px
+ ************************************************/
+
+@media only screen and (min-width: $large) {
+
+    .header-wrapper {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        justify-content: center;
+    }
+
+    .header__body {
+        margin-top: 0;
+        width: 100%;
+    }
+
+    .header__scroll {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        margin-top: 0;
+    }
+
+}

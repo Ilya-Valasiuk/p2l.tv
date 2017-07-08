@@ -1,0 +1,176 @@
+/********************************
+ *    map
+ ********************************/
+
+.map {
+    padding: 56vw 0 0;
+}
+.map-wrapper {
+    width: 100% !important;
+}
+
+#map {
+    position: absolute;
+    background: #000;
+    opacity: 0.7;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.location__list {
+    padding: 40px 25px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(255,255,255, 0.85);
+    transform: translateZ(-5em);
+}
+
+.location__item {
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.location__address {
+    font-size: 20px;
+    font-weight: 500px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+
+
+    &:before {
+        content: "";
+        display: block;
+        margin-right: 28px;
+        height: 28px;
+        width: 21px;
+        background: url(../img/marker.svg);
+        background-size: cover;
+    }
+}
+
+.location__phone-number {
+    margin:0 0 10px 50px;
+    
+}
+.location__e-mail {
+    margin:0 0 0 50px;
+    color: $secondaryLogoColor;
+    text-decoration: underline;
+}
+
+/************************************************
+ *      Styles fo width: 640px
+ ************************************************/
+
+@media only screen and (min-width: $medium) {
+
+    .map-wrapper {
+        display: flex;
+    }
+
+    .map {
+        padding: 0;
+
+        .location__list {
+            padding: 50px 25px 35px 40px;
+        }
+
+    }
+
+}
+
+
+/************************************************
+ *      Styles fo width: 1024px
+ ************************************************/
+
+@media only screen and (min-width: $large) {
+
+    .map-wrapper {
+        width: 85% !important;
+    }
+    .map {
+        padding: 0;
+
+        #map {
+            position: absolute;
+            background: #000;
+            opacity: 0.7;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+
+        .location__list {
+            height: 100%;
+            padding: 30px 45px;
+            justify-content: space-around;
+            transform: translateZ(-5em);
+        }
+
+        .location__item {
+            font-size: 18px;
+        }
+
+        .location__address {
+            font-size: 24px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 20px;
+
+            &:before {
+                content: "";
+                display: block;
+                margin-right: 28px;
+                height: 45px;
+                width: 33px;
+                background: url(../img/marker.svg)
+            }
+        }
+
+        .location__phone-number {
+            margin: 0 0 10px 62px;
+
+        }
+        .location__e-mail {
+            margin: 0 0 0 62px;
+            color: $secondaryLogoColor;
+            text-decoration: underline;
+        }
+    }
+}
+
+
+/************************************************
+ *      Styles fo width: 1024px
+ ************************************************/
+
+@media only screen and (min-width: $large2x) {
+
+    .map {
+        .location__list {
+            width: 520px;
+            padding: 45px 95px;
+            height: 100%;
+        }
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+

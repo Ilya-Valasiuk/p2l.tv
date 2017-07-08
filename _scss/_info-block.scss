@@ -1,0 +1,167 @@
+/********************************
+ *      .info-block
+ ********************************/
+
+.info-block {
+    background: url('../img/info-block-mobile.jpg');
+    background-position: center bottom;
+    //background-size: contain;
+    background-repeat: no-repeat;
+    padding-top: 60px;
+    background-size: 85%;
+    padding-bottom: 58vw;
+
+    &__container {
+        margin: 0;
+        width: 100%;
+    }
+    
+    &__icon {
+        display: block;
+        width: 30px;
+        height: 21px;
+        margin-bottom: 45px;
+        background: url(../img/gamepad.svg);
+        background-size: cover;
+    }
+    
+    &__headline {
+        margin-bottom: 30px;
+        font-size: 26px;
+        font-weight: 500;
+    }
+    &__copy {
+        margin-bottom: 30px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    &__button {
+        display: inline-block;
+        padding: 13px 40px 15px;
+        font-size: 20px;
+        text-align: center;
+        text-transform: uppercase;
+        background-color: $logoColor;
+        border-radius: 25px;
+        color: $headerTextColor;
+    }
+
+}
+
+
+/************************************************
+ *      Styles fo width: 640px
+ ************************************************/
+
+@media only screen and (min-width: $medium) {
+
+    .info-block {
+
+        &__icon {
+            width: 62px;
+            height: 32px;
+        }
+
+        &__headline {
+            margin-bottom: 40px;
+            font-size: 36px;
+            font-weight: 500;
+        }
+        &__copy {
+            margin-bottom: 55px;
+            font-size: 18px;
+            line-height: 30px;
+        }
+
+        &__button {
+            width: 195px;
+            padding: 22px 0 20px;
+            font-size: 20px;
+            text-align: center;
+            text-transform: uppercase;
+            background-color: $logoColor;
+            border-radius: 30px;
+            color: $headerTextColor;
+        }
+    }
+}
+
+
+/************************************************
+ *      Styles fo width: 1024px
+ ************************************************/
+
+@media only screen and (min-width: $large) {
+    .info-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .info-block {
+        background: #fff url(../img/info-block.jpg) center bottom no-repeat;
+        background-position-x: 200%;
+        padding-bottom: 0;
+    }
+
+    .info-block {
+
+        &__container {
+            max-width: 450px;
+            padding-bottom: 0;
+        }
+
+        &__headline {
+            margin-bottom: 40px;
+            font-size: 36px;
+            font-weight: 500;
+        }
+        &__copy {
+            margin-bottom: 55px;
+            font-size: 18px;
+            line-height: 30px;
+        }
+
+        &__button {
+            width: 195px;
+            padding: 22px 0 20px;
+            font-size: 20px;
+            text-align: center;
+            text-transform: uppercase;
+            background-color: $logoColor;
+            border-radius: 30px;
+            color: $headerTextColor;
+
+        }
+    }
+
+}
+
+
+/************************************************
+ *      Styles fo width: 1280px
+ ************************************************/
+
+@media only screen and (min-width: $large2x) {
+
+    .info-block {
+        background: #fff url(../img/info-block.jpg) right bottom no-repeat;
+        background-position-x: 100%;
+
+        &__container {
+            margin: 150px 0 160px 90px;
+            padding-bottom: 0;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
