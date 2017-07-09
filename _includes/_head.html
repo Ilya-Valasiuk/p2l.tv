@@ -21,26 +21,32 @@
 
         function init() {
             var mapOptions = {
-                zoom: 11,
-                center: new google.maps.LatLng(-33.91721, 151.22630), // New York
+                zoom: 4,
+                center: new google.maps.LatLng(55.7522200, 37.6155600), // New York
                 styles: [ { "featureType": "administrative", "elementType": "labels.text.fill", "stylers": [ { "color": "#444444" } ] }, { "featureType": "landscape", "elementType": "all", "stylers": [ { "color": "#f2f2f2" } ] }, { "featureType": "poi", "elementType": "all", "stylers": [ { "visibility": "off" } ] }, { "featureType": "road", "elementType": "all", "stylers": [ { "saturation": -100 }, { "lightness": 45 } ] }, { "featureType": "road.highway", "elementType": "all", "stylers": [ { "visibility": "simplified" } ] }, { "featureType": "road.arterial", "elementType": "labels.icon", "stylers": [ { "visibility": "off" } ] }, { "featureType": "transit", "elementType": "all", "stylers": [ { "visibility": "off" } ] }, { "featureType": "water", "elementType": "all", "stylers": [ { "color": "#0bd0d9" }, { "visibility": "on" } ] } ]
             };
 
             var mapElement = document.getElementById('map');
             var map = new google.maps.Map(mapElement, mapOptions);
 
+
+            1.2896700
             var locations = [
                 {
-                    position: new google.maps.LatLng(-33.91721, 151.22630),
-                    title: "location1"
+                    position: new google.maps.LatLng(1.2896700, 103.8500700),
+                    title: "Singapore"
                 },
                 {
-                    position: new google.maps.LatLng(-33.92539, 152.22820),
-                    title:"lacation 2"
+                    position: new google.maps.LatLng(35.047068,33.152740),
+                    title:"Cyprus"
                 },
                 {
-                    position: new google.maps.LatLng(-34.91747, 150.22912),
-                    type: 'lacation3'
+                    position: new google.maps.LatLng(53.9000000,27.5666700),
+                    type: 'Belarus'
+                },
+                {
+                    position: new google.maps.LatLng(55.7522200, 37.6155600),
+                    type: 'Russia'
                 }
             ];
 

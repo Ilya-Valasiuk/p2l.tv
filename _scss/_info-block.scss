@@ -100,8 +100,8 @@
     }
 
     .info-block {
-        background: #fff url(../img/info-block.jpg) center bottom no-repeat;
-        background-position-x: 200%;
+        background: #fff url(../img/info-block.jpg);
+        background-size: cover;
         padding-bottom: 0;
     }
 
@@ -109,6 +109,7 @@
 
         &__container {
             max-width: 450px;
+            margin-left: 40px;
             padding-bottom: 0;
         }
 
@@ -146,9 +147,6 @@
 @media only screen and (min-width: $large2x) {
 
     .info-block {
-        background: #fff url(../img/info-block.jpg) right bottom no-repeat;
-        background-position-x: 100%;
-
         &__container {
             margin: 150px 0 160px 90px;
             padding-bottom: 0;

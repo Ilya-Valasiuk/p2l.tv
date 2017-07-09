@@ -166,6 +166,10 @@
 
 @media only screen and (min-width: $medium) {
 
+
+    .team__info-block {
+        height: 255px;
+    }
     .team {
         //padding: 1px 45px;
 
@@ -193,7 +197,7 @@
     }
 
     .member-info__headline {
-        padding: 20px;
+        padding: 10px 0 20px;
         margin-bottom: 20px;
     }
     .member-info__name {
@@ -225,11 +229,6 @@
         &__member-block {
             padding: 0 40px;
         }
-    }
-
-
-    .team__info-block {
-        height: 255px;
     }
 
     .member-info__container {

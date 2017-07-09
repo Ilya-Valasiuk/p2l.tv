@@ -120,7 +120,11 @@
         border-bottom: 1px solid $thirdLogoColor;
 
         &:after {
-            content:"🡪";
+            content:"";
+            width: 12px;
+            height: 12px;
+            background: url("../img/arrow.png");
+            background-size: cover;
             font-size:16px;
             display: inline-block;
             margin-left: 5px;
@@ -205,7 +209,7 @@
         margin: 0;
 
         &__block {
-            margin: 0 90px 20px;
+            margin: 0 40px 20px;
             display: flex;
             flex-direction: column
         }
@@ -254,7 +258,8 @@
 
         &__block {
             display: flex;
-            flex-direction: column
+            flex-direction: column;
+            margin: 0 90px 20px;
         }
     }
 

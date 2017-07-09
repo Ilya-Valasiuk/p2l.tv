@@ -6,31 +6,72 @@
         isAnimation: false,
         sections: $('.main-section'),
         siteNav: $('.site-nav'),
+        currentPosition: 0
     };
 
+    function toggleModalWindowVisibility(el) {
+
+        if ( !$(el).hasClass('close-button') ) {
+            globalProp.currentPosition = $(window).scrollTop();
+        }
+
+        $('.site-nav').toggleClass('hidden')
+        $('body').toggleClass('fixed');
+        $('.main-wrapper').toggleClass('blured');
+
+        if ( $(el).hasClass('close-button') ) {
+            event.preventDefault();
+            $(window).scrollTop(globalProp.currentPosition);
+        }
+    }
 
 
     $( window ).resize(function() {
         globalProp.windowHeight = $(window).height();
+        $('.site-nav').removeClass('fixed-nav');
 
     //    others
     });
 
 
-    function jobLocationFilter() {
-
-    }
-
-
-    function jobCategoriesFilter() {
-
-    }
+    $('.nav-trigger').on('click touch', function(event) {
+        $('.mobile-nav').toggleClass('show-flex');
+        toggleModalWindowVisibility(this);
+    });
 
 
-    function jobCommonFilter() {
+    $('.career-trigger').on('click touch', function(event) {
+        event.preventDefault();
+        $('.full-screen').toggleClass('show-flex');
+        toggleModalWindowVisibility(this);
+    });
 
-    }
-    //
+    $('.mobile-nav__link').on('click touch', function(event) {
+        event.preventDefault();
+        $('.mobile-nav').toggleClass('show-flex');
+        toggleModalWindowVisibility(this);
+
+        var blockName = $(this).data('block');
+        var scrollPosition = $('.main-section.' + blockName).offset().top;
+        $(window).scrollTop(scrollPosition - 65);
+    });
+
+
+
+
+    //add fixed nav
+
+    $(window).on('scroll', function (event) {
+        if ($(window).width() <= '1024') {
+            if ($(window).scrollTop() <= 0) {
+                $('.site-nav').removeClass('fixed-nav');
+            } else {
+                $('.site-nav').addClass('fixed-nav');
+            }
+        }
+    });
+
+
     var selectionResult = $('.selection-result');
     var selectionItemsValues = selectionResult.find('.selection-result__copy');
     var filter = {
@@ -47,6 +88,7 @@
             $('body').off('click touch', closeListHandler)
         }
     }
+
 
     $('.selection').on('click touch', function(event) {
     
@@ -90,78 +132,30 @@
         }
     });
     
-    
+
     $('.language').on('click touch', function(event) {
-    
-        var parentEl = $(event.target);
-        while ( !parentEl.hasClass('language')) {
-            parentEl = parentEl.parent();
-        }
-    
-        $(parentEl.find('.language__list')[0]).toggleClass('show');
-        var currentEl = parentEl.find('.language__current')[0];
-    
-        if ($(event.target).hasClass('language__item')) {
-            var text = $(event.target).text();
-            $(currentEl).text(text);
+        $('.site-nav .language__list').toggleClass('show');
+    });
+
+
+    $(".file-input").on('change', function() {
+        var value = $(this).val();
+        if (value) {
+            $(".input-placeholder").text(value);
+        } else {
+            $(".input-placeholder").text("Choose CV to upload");
         }
     });
-    //
-    // $(window).on('scroll', function (event) {
-    //
-    //     var scrollTop = $(window).width() <= '640' ? 0 : 25;
-    //
-    //     if ($(window).width() <= '1020') {
-    //         if ($(window).scrollTop() <= scrollTop) {
-    //             $('.header .site-nav').removeClass('fixed-nav');
-    //         } else {
-    //             $('.header .site-nav').addClass('fixed-nav');
-    //         }
-    //     }
-    // });
-    //
-    // $('.nav-trigger').on('click touch', function(event) {
-    //     $($('body').find('.mobile-nav')[0]).toggleClass('show-flex');
-    //     $('body').toggleClass('fixed');
-    //     $('.wrapper').toggleClass('blured');
-    // });
-    //
-    //
-    // $('.career-trigger').on('click touch', function(event) {
-    //     event.preventDefault();
-    //     $('.full-screen').toggleClass('show-flex');
-    //     $('body').toggleClass('fixed');
-    //     $('.wrapper').toggleClass('blured');
-    // });
-    //
-    // $(".file-input").on('change', function() {
-    //     var value = $(this).val();
-    //     if (value) {
-    //         $(".input-placeholder").text(value);
-    //     } else {
-    //         $(".input-placeholder").text("Choose CV to upload");
-    //     }
-    // });
-    //
-    // $(".input").on('input', function() {
-    //     var value = $(this).val();
-    //     if (value) {
-    //         $(this).parent().addClass('input-container--filled');
-    //     } else {
-    //         $(this).parent().removeClass('input-container--filled');
-    //     }
-    // });
-    //
-    //
 
+    $(".input").on('input', function() {
+        var value = $(this).val();
+        if (value) {
+            $(this).parent().addClass('input-container--filled');
+        } else {
+            $(this).parent().removeClass('input-container--filled');
+        }
+    });
 
-
-
-    // $('body').on("scroll",
-    // function (e) {
-    //     debugger;
-
-    // });
 
     
     var debouncedWheelHandler = $.debounce(120, true, onWheel);

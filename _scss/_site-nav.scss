@@ -166,16 +166,16 @@
     bottom: 0;
     background: rgba(255, 255, 255, 0.975);
     flex-direction: row;
+    justify-content: center;
     align-items: flex-start;
     z-index: 10;
     display: none;
 
     &__close {
         margin-right: 30px;
-        margin-top: 3px;
 
         path {
-            fill: $headlineColor;
+            fill: $mobileNavColor;
         }
     }
 
@@ -189,7 +189,7 @@
         text-transform: uppercase;
 
         &--current {
-            color: $headlineColor;
+            color: $mobileNavColor;
         }
     }
 
@@ -203,8 +203,8 @@
         text-transform: uppercase;
         display: inline-block;
 
-        &--current {
-            color: $headlineColor;
+        &.lang--current {
+            color: $mobileNavColor;
         }
     }
 
@@ -213,13 +213,10 @@
     }
 
     .mobile-nav__logo-img path {
-        fill: $headlineColor;
+        fill: $mobileNavColor;
     }
 
 }
-
-
-
 
 
 
@@ -233,6 +230,7 @@
     .mobile-nav {
         right: initial;
         padding-right: 50px;
+        max-width: 400px;
     }
 
     .site-nav {
