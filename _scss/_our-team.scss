@@ -244,9 +244,12 @@
         border-radius: 50%;
 
         &:after {
-            content: "🡪";
-            font-size: 20px;
-            display: inline-block;
+            content: "";
+            display: block;
+            width: 18px;
+            height: 16px;
+            background: url(../img/arrow.png);
+            background-size: cover;
             margin: auto;
             color: $teamTextColor;
         }

@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58cd1a83-d157-4c1b-9f1c-406ca5925b1d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/img/info-block.jpg" afterPath="$PROJECT_DIR$/assets/img/info-block.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/_head.html" afterPath="$PROJECT_DIR$/_includes/_head.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/careers.html" afterPath="$PROJECT_DIR$/_includes/careers.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/mobile-nav.html" afterPath="$PROJECT_DIR$/_includes/mobile-nav.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/site-nav.html" afterPath="$PROJECT_DIR$/_includes/site-nav.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/home.html" afterPath="$PROJECT_DIR$/_layouts/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_scss/_info-block.scss" afterPath="$PROJECT_DIR$/_scss/_info-block.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_scss/_join-team.scss" afterPath="$PROJECT_DIR$/_scss/_join-team.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_scss/_map.scss" afterPath="$PROJECT_DIR$/_scss/_map.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_scss/_our-team.scss" afterPath="$PROJECT_DIR$/_scss/_our-team.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_scss/_site-nav.scss" afterPath="$PROJECT_DIR$/_scss/_site-nav.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/js.js" afterPath="$PROJECT_DIR$/assets/js/js.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/stylesheet/style.scss" afterPath="$PROJECT_DIR$/assets/stylesheet/style.scss" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -117,7 +105,7 @@
         </leaf>
       </split-first>
       <split-second>
-        <splitter split-orientation="horizontal" split-proportion="0.84476537">
+        <splitter split-orientation="horizontal" split-proportion="0.3068592">
           <split-first>
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
               <file leaf-file-name="_info-block.scss" pinned="false" current-in-tab="false">
@@ -143,8 +131,8 @@
               <file leaf-file-name="_head.html" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/_includes/_head.html">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="87">
-                      <caret line="24" column="57" lean-forward="false" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="57" />
+                    <state relative-caret-position="53">
+                      <caret line="22" column="10" lean-forward="true" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
                       <folding />
                     </state>
                   </provider>
@@ -177,8 +165,8 @@
               <file leaf-file-name="_our-team.scss" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/_scss/_our-team.scss">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="221">
-                      <caret line="199" column="28" lean-forward="false" selection-start-line="199" selection-start-column="28" selection-end-line="199" selection-end-column="28" />
+                    <state relative-caret-position="137">
+                      <caret line="249" column="22" lean-forward="false" selection-start-line="249" selection-start-column="22" selection-end-line="249" selection-end-column="22" />
                       <folding />
                     </state>
                   </provider>
@@ -252,7 +240,6 @@
         <option value="$PROJECT_DIR$/_includes/info-block.html" />
         <option value="$PROJECT_DIR$/_scss/_footer.scss" />
         <option value="$PROJECT_DIR$/_includes/our-team.html" />
-        <option value="$PROJECT_DIR$/_scss/_our-team.scss" />
         <option value="$PROJECT_DIR$/_scss/_map.scss" />
         <option value="$PROJECT_DIR$/assets/stylesheet/style.scss" />
         <option value="$PROJECT_DIR$/_includes/site-nav.html" />
@@ -264,6 +251,7 @@
         <option value="$PROJECT_DIR$/_scss/_join-team.scss" />
         <option value="$PROJECT_DIR$/_scss/_info-block.scss" />
         <option value="$PROJECT_DIR$/_includes/_head.html" />
+        <option value="$PROJECT_DIR$/_scss/_our-team.scss" />
       </list>
     </option>
   </component>
@@ -511,12 +499,12 @@
       <workItem from="1499448546160" duration="56501000" />
       <workItem from="1499539357815" duration="21000" />
       <workItem from="1499540165971" duration="286000" />
-      <workItem from="1499607290378" duration="21433000" />
+      <workItem from="1499607290378" duration="22336000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="166569000" />
+    <option name="totallyTimeSpent" value="167472000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -526,7 +514,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.57335126" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -885,14 +873,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_scss/_our-team.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="199" column="28" lean-forward="false" selection-start-line="199" selection-start-column="28" selection-end-line="199" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/stylesheet/style.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1921">
@@ -919,8 +899,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_includes/_head.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="24" column="57" lean-forward="false" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="57" />
+        <state relative-caret-position="53">
+          <caret line="22" column="10" lean-forward="true" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_scss/_our-team.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="249" column="22" lean-forward="false" selection-start-line="249" selection-start-column="22" selection-end-line="249" selection-end-column="22" />
           <folding />
         </state>
       </provider>
