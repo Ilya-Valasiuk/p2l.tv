@@ -9,17 +9,19 @@
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,600,700" rel="stylesheet">
     <link href="assets/stylesheet/style.css" rel="stylesheet">
 
+     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwaUVstBWn0PUZIQghQhkGM4IW9VKMrvY&callback=initMap""
+  type="text/javascript"></script>
     <script src="assets/js/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.js"></script>
     <script>(function(b,c){var $=b.jQuery||b.Cowboy||(b.Cowboy={}),a;$.throttle=a=function(e,f,j,i){var h,d=0;if(typeof f!=="boolean"){i=j;j=f;f=c}function g(){var o=this,m=+new Date()-d,n=arguments;function l(){d=+new Date();j.apply(o,n)}function k(){h=c}if(i&&!h){l()}h&&clearTimeout(h);if(i===c&&m>e){l()}else{if(f!==true){h=setTimeout(i?k:l,i===c?e-m:e)}}}if($.guid){g.guid=j.guid=j.guid||$.guid++}return g};$.debounce=function(d,e,f){return f===c?a(d,e,false):a(d,f,e!==false)}})(this);</script>
 
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+   
     
     <!-- add google maps-->
     <script type="text/javascript">
 
 
-        function init() {
+        function initMap() {
             var mapOptions = {
                 zoom: 4,
                 center: new google.maps.LatLng(55.7522200, 37.6155600), // New York

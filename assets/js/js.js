@@ -302,10 +302,5 @@
             duration: 400,
         });
     }
-
-    google.maps.event.addDomListener(window, 'load', init);
-
-
-
 })()
 
