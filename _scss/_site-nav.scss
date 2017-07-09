@@ -258,7 +258,6 @@
     .site-nav {
 
         padding: 55px 0;
-        transition: all 0.5s ease-out;
 
         &__trigger {
             display: none;
@@ -285,11 +284,11 @@
             font-weight: 300;
             text-decoration: none;
             text-transform: uppercase;
-            transition: color 0.5s ease-out;
+            transition: color 0.3s ease-out;
         }
 
         .site-nav__logo-img path {
-            transition: fill 0.5s ease-out;
+            transition: fill 0.3s ease-out;
         }
     }
 
@@ -360,11 +359,9 @@
     }
 
 
-
     /************************************
      *   styles for join navigation
      ************************************/
-    .site-nav[data-for-id='3'],
     .site-nav[data-for-id='4'] {
 
         visibility: visible;
@@ -395,6 +392,43 @@
     }
 
 
+    /************************************
+     *   styles for team navigation
+     ************************************/
+    .site-nav[data-for-id='3'] {
+
+        visibility: visible;
+
+        .site-nav__logo-img path {
+            fill: $teamTextColor;
+        }
+
+        .language__item {
+            border: 1px solid $joinTextColor;
+        }
+
+        .language__current:after {
+            border-top-color: $mainTextColor; //color of arrow
+        }
+
+        .site-nav__team {
+            border-bottom-color: $teamTextColor;
+        }
+
+        .site-nav__link {
+            color: $mainTextColor;
+        }
+
+        .site-nav__link:hover {
+            border-bottom-color: $joinTextColor;
+        }
+
+        .site-nav__team {
+            border-bottom-color: $joinTextColor;
+        }
+
+    }
+
 
     /************************************
      *   styles for map navigation
@@ -403,7 +437,6 @@
     .site-nav[data-for-id='5'] {
 
         transform: translateZ(-5em);
-        background-color: rgba(255,255,255, 0.85);
         visibility: visible;
 
         .site-nav__logo-img path {
