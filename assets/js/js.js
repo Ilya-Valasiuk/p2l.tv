@@ -158,7 +158,7 @@
 
 
     
-    var debouncedWheelHandler = $.debounce(120, true, onWheel);
+    var debouncedWheelHandler = $.debounce(50, true, onWheel);
 
     var prevTime = new Date().getTime();
     var f = function(){
@@ -174,7 +174,7 @@
 
     if ('onwheel' in document) {
         window.addEventListener("wheel", debouncedWheelHandler);
-        // window.addEventListener('wheel', f);
+        // window.addEventListener('wheel', onWheel);
     }
 
     function addHandlerForNavigation() {
@@ -233,12 +233,74 @@
         $('.main-wrapper').velocity({
                 translateY: -translateY,
             }, {
-                duration: 800,
+                duration: 400,
                 complete: function() {
-                    globalProp.isAnimation = false;
+                    // setTimeout(function() {
+                        globalProp.isAnimation = false;
+                    // }, 250);
                 }
         });
 
+    }
+
+    var scrolledItems = $('.team__member-item');
+    var selectedItem = $('.member--selected');
+    var scrolledWrapper = $('.team__member-list ul');
+    var currentScrolledValue = 0;
+    var selectedIndex = scrolledItems.index(selectedItem);
+    var defaultSelectedIndex = selectedIndex;
+    var nextElements;
+    var classes = ['small', 'middle', 'large', 'member--selected', 'large', 'middle', 'small'];
+    var classesToShow = [];
+    var largeStep = 93;
+    var itemsBufferLen = 3;
+
+    $('.member-nav__next').on('click', function () {
+        if (selectedIndex === scrolledItems.length - 1) return 0;
+        selectedIndex += 1;
+        currentScrolledValue -= largeStep;
+        nextElements = scrolledItems.slice(selectedIndex-itemsBufferLen, selectedIndex + itemsBufferLen + 1);
+        classesToShow = classes.slice();
+
+        doScroll();
+    });
+
+    $('.member-nav__prev').on('click', function () {
+        if (!selectedIndex) return 0;
+        selectedIndex -= 1;
+        currentScrolledValue += largeStep;
+        nextElements = scrolledItems.slice(Math.max(selectedIndex-itemsBufferLen, 0), selectedIndex + itemsBufferLen + 1);
+
+        if (classes.length > nextElements.length) {
+            classesToShow = classes.slice(classes.length - nextElements.length);
+        }
+
+        doScroll();
+    });
+
+    function doScroll() {
+        removeClasses(scrolledItems);
+        applyClasses(nextElements);
+        makeMovement(currentScrolledValue);
+    }
+
+
+    function removeClasses(elements) {
+        elements.removeClass(classes.join(' '));
+    }
+
+    function applyClasses(elements) {
+        classesToShow.map(function(className, index) {
+            $(elements.get(index)).addClass(className);
+        });
+    }
+
+    function makeMovement(value) {
+        scrolledWrapper.velocity({
+            translateX: value
+        }, {
+            duration: 400,
+        });
     }
 
     google.maps.event.addDomListener(window, 'load', init);

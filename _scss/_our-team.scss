@@ -24,56 +24,96 @@
 }
 
 .team-section-wrapper {
-    height: initial;
+    height: initial !important;
 }
 
 .team__member-list {
     margin: 0 -15%;
     margin-bottom: 30px;
+    overflow: hidden;
 
     ul {
         position: relative;
-        width: 100%;
-        height: 130px;
+        width: 2000px;
+        overflow: hidden;
+        height: 177px;
+        // height: 130px;
+        // display: flex;
+        // justify-content: space-around;
+        // align-items: center;
     }
 }
 
 .team__member-item {
-    margin: 50px 0;
-    border-radius: 50%;
-    width: 65px;
-    height: 65px;
+    margin: 0 13px;
+    // border-radius: 50%;
+    height: 100%;
     overflow: hidden;
-    position: absolute;
+    display: flex;
+    align-items: center;
+    float: left;
+    transform: translate3d(0, 0, 0);
+    
+    // position: absolute;
 
-    &:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background-color: rgba(255,255,255,0.85);
-    }
-
-    &[data-showed="small"] {
-        transform: scale(1);
-    }
-
-    &[data-showed="middle"] {
-        transform: scale(1.35);
-    }
-    &[data-showed="large"] {
-        transform: scale(1.96);
-    }
-
-    &[data-showed="selected"] {
-
-        transform: scale(2.72);
+    div {
+        width: 65px;
+        height: 65px;
+        transition: all 0.4s linear;
 
         &:before {
-            background: transparent;
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            transition: all 0.4s linear;
+            background-color: rgba(255,255,255,0.85);
         }
+    }
+
+    &.small {
+        div {
+
+        }
+        // transform: scale(1);
+        // margin-right: 50px 20px;
+    }
+
+    &.middle {
+        div {
+            width: 87px;
+            height: 87px;
+        }
+        
+        // transform: scale(1.35);
+        // margin-right: 55px;/
+    }
+    &.large {
+        div {
+            width: 126px;
+            height: 126px;
+        }
+        
+        // transform: scale(1.96);
+        // margin-right: 100px;
+    }
+
+    &.member--selected {
+        div {
+            width: 177px;
+            height: 177px;
+
+            &:before {
+                background: transparent;
+            }
+        }
+        
+        // transform: scale(2.72);
+        // margin-right: 100px;
+
+       
     }
 }
 
