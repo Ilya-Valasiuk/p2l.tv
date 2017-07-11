@@ -28,14 +28,15 @@
 }
 
 .team__member-list {
-    margin: 0 -15%;
+    margin: 0 -7.5%;
     margin-bottom: 30px;
     overflow: hidden;
 
     ul {
         position: relative;
-        width: 2000px;
+        width: 10000px;
         overflow: hidden;
+        // padding: 20px 0;
         height: 177px;
         // height: 130px;
         // display: flex;
@@ -44,9 +45,17 @@
     }
 }
 
+// .slick-current {
+//     div {
+//         width: 177px;
+//         height: 177px;
+//     }
+    
+// }
+
 .team__member-item {
     margin: 0 13px;
-    // border-radius: 50%;
+    border-radius: 50%;
     height: 100%;
     overflow: hidden;
     display: flex;
@@ -60,6 +69,25 @@
         width: 65px;
         height: 65px;
         transition: all 0.4s linear;
+
+        .center & {
+            // width: 177px;
+            // height: 177px;
+        }
+
+        .small & {
+
+        }
+
+        .middle & {
+             width: 87px;
+            height: 87px;
+        }
+
+        .large & {
+             width: 126px;
+            height: 126px;
+        }
 
         &:before {
             content: "";
@@ -281,6 +309,7 @@
         min-height: 36px;
         display: flex;
         border: 2px solid $teamTextColor;
+        cursor: pointer;
         border-radius: 50%;
 
         &:after {
@@ -345,4 +374,24 @@
 
     }
 
+}
+
+.slick-current {
+    // width: 177px;
+    // height: 177px;
+    // margin: 0 15px;
+    // div {
+    // transform: scale(2.75);
+    //    width: 180px;
+    //    height: 180px;
+    // }
+
+    &:before {
+        background: transparent;
+    }
+    
+}
+
+.owl-stage {
+    width: 10000px !important;
 }

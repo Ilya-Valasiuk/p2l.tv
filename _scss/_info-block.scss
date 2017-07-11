@@ -36,6 +36,12 @@
         line-height: 20px;
     }
 
+    &__copy-bold {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 500;
+    }
+
     &__button {
         display: inline-block;
         padding: 13px 40px 15px;
@@ -70,6 +76,11 @@
         }
         &__copy {
             margin-bottom: 55px;
+            font-size: 18px;
+            line-height: 30px;
+        }
+
+        &__copy-bold {
             font-size: 18px;
             line-height: 30px;
         }
@@ -120,6 +131,11 @@
         }
         &__copy {
             margin-bottom: 55px;
+            font-size: 18px;
+            line-height: 30px;
+        }
+
+         &__copy-bold {
             font-size: 18px;
             line-height: 30px;
         }
