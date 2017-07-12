@@ -29,15 +29,15 @@
 
 .team__member-list {
     margin: 0 -7.5%;
-    margin-bottom: 30px;
-    overflow: hidden;
+    // margin-bottom: 30px;
+    // overflow: hidden;
 
     ul {
         position: relative;
-        width: 10000px;
+        // width: 10000px;
         overflow: hidden;
-        // padding: 20px 0;
-        height: 177px;
+        padding: 30px 0;
+        // height: 177px;
         // height: 130px;
         // display: flex;
         // justify-content: space-around;
@@ -45,29 +45,32 @@
     }
 }
 
-// .slick-current {
-//     div {
-//         width: 177px;
-//         height: 177px;
-//     }
+.slick-current {
+    div {
+        transform: scale(1.2);
+    }
     
-// }
+}
+
+.slick-list {
+    overflow: visible;
+}
 
 .team__member-item {
     margin: 0 13px;
-    border-radius: 50%;
-    height: 100%;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    float: left;
+    // border-radius: 50%;
+    // height: 100%;
+    // overflow: hidden;
+    // display: flex;
+    // align-items: center;
+    // float: left;
     transform: translate3d(0, 0, 0);
     
     // position: absolute;
 
     div {
-        width: 65px;
-        height: 65px;
+        // width: 65px;
+        // height: 65px;
         transition: all 0.4s linear;
 
         .center & {
@@ -128,10 +131,11 @@
         // margin-right: 100px;
     }
 
-    &.member--selected {
+    &.member--selected,
+    &.slick-current {
         div {
-            width: 177px;
-            height: 177px;
+            // width: 177px;
+            // height: 177px;
 
             &:before {
                 background: transparent;
@@ -191,17 +195,20 @@
 
 .member-info__list {
     height: 100%;
-    width: 100%;
+    // width: 100%;
+    overflow: hidden;
     position: relative;
 }
 .member-info__item {
-    position: absolute;
-    width: 100%;
+    // position: absolute;
+    // width: 100%;
+    // height: 100%;
     padding: 20px 0;
     line-height: 20px;
     font-size: 14px;
     text-align: center;
     color: $mainTextColor;
+    transform: translate3d(0, 0, 0);
 }
 .member-info__headline {
     display: inline-block;
@@ -248,7 +255,7 @@
         }
 
         &__copy {
-            margin-bottom: 20px;
+            margin-bottom: 0px;
             font-size: 18px;
             line-height: 30px;
         }
@@ -256,7 +263,8 @@
     }
 
     .team__member-list {
-        margin: 0 0 30px 0;
+        margin: 0;
+        padding: 20px 0;
     }
 
     .member-info__item {
@@ -328,6 +336,13 @@
         }
     }
 
+    .slick-current {
+        div {
+            transform: scale(1.3);
+        }
+        
+    }
+
 
     // /.team-wrapper {
     //    display: flex;
@@ -350,7 +365,7 @@
 
 
 /************************************************
- *      Styles fo width: 1024px
+ *      Styles fo width: 1280x
  ************************************************/
 
 @media only screen and (min-width: $large2x) {
