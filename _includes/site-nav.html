@@ -49,6 +49,7 @@
                     <a href="#contact-us" class="site-nav__link site-nav__map" data-scroll-to="5">Contact us</a>
                 </li>
                 <li class="site-nav__item language">
+                    {{ base }}
                     {% if page.lang == 'eng' %}
                         <span class="language__current">ENG</span>
                     {% else %}
@@ -56,11 +57,11 @@
                     {% endif %}
                     <ul class="language__list">
                         {% if page.lang == 'eng' %}
-                            <li class="language__item language__item--current"><a href="{{ site.url }}/index">ENG</a></li>
-                            <li class="language__item"><a href="{{ site.url }}/index-ru">RUS</a></li>
+                            <li class="language__item language__item--current"><a href="{{ base }}/index">ENG</a></li>
+                            <li class="language__item"><a href="{{ base }}/index-ru">RUS</a></li>
                         {% else %}
-                            <li class="language__item"><a href="{{ site.url }}/index">ENG</a></li>
-                            <li class="language__item language__item--current"><a href="{{ site.url }}/index-ru">RUS</a></li>
+                            <li class="language__item"><a href="{{ base }}/index">ENG</a></li>
+                            <li class="language__item language__item--current"><a href="{{ base }}/index-ru">RUS</a></li>
                         {% endif %}
                     </ul>
                 </li>
