@@ -35,9 +35,21 @@
         cursor: pointer;
     }
 
-    .site-nav__item:hover {
-        .language {
-            border-bottom-color: transparent;
+
+    .language {
+        border-bottom: 2px solid transparent;
+        font-size: 18px;
+        padding: 3px 0;
+        font-weight: 300;
+        text-transform: uppercase;
+        transition: color 0.3s ease-out;
+        color: $mainTextColor;
+        cursor: pointer;
+
+        &:hover {
+            .language__list {
+                display: block;
+            }
         }
     }
 }
@@ -69,7 +81,7 @@
 .language__list {
     display: none;
     position: absolute;
-    top: 25px;
+    top: 24px;
     width: 100%
 }
 
@@ -304,13 +316,24 @@
         visibility: visible;
 
         .language__item {
+            transition: all 0.2s ease;
             border: 1px solid $headerTextColor;
+            border-top: none;
+            &:hover,
+            &--current {
+                background: $headerTextColor;
+                color: $mainTextColor;
+            }
+            &:first-child {
+                border-top: 1px solid $headerTextColor;
+            }
         }
 
         .language__current:after {
             border-top-color: $headerTextColor; //color of arrow
         }
 
+        .language,
         .site-nav__link {
             color: $headerTextColor;
         }
@@ -336,7 +359,19 @@
         }
 
         .language__item {
+            transition: all 0.2s ease;
             border: 1px solid $infoTextColor;
+            border-top: none;
+
+            &:hover,
+            &--current {
+                background: $infoTextColor;
+                color: $mainTextColor;
+            }
+
+            &:first-child {
+                border-top: 1px solid $infoTextColor;
+            }
         }
 
         .language__current:after {
@@ -370,7 +405,19 @@
         }
 
         .language__item {
+            transition: all 0.2s ease;
             border: 1px solid $joinTextColor;
+            border-top: none;
+
+            &:hover,
+            &--current {
+                background: $joinTextColor;
+                color: $mainTextColor;
+            }
+
+            &:first-child {
+                border-top: 1px solid $joinTextColor;
+            }
         }
 
         .language__current:after {
@@ -403,7 +450,18 @@
         }
 
         .language__item {
-            border: 1px solid $joinTextColor;
+            transition: all 0.2s ease;
+            border: 1px solid $teamTextColor;
+            border-top: none;
+
+            &:hover,
+            &--current {
+                background: $teamTextColor;
+                color: $mainTextColor;
+            }
+            &:first-child {
+                border-top: 1px solid $teamTextColor;
+            }
         }
 
         .language__current:after {
@@ -443,7 +501,19 @@
         }
 
         .language__item {
+            transition: all 0.2s ease;
             border: 1px solid $mapTextColor;
+            border-top: none;
+
+            &:hover,
+            &--current {
+                background: $mapTextColor;
+                color: $mainTextColor;
+            }
+            &:first-child {
+                border-top: 1px solid $mapTextColor;
+            }
+
         }
 
         .language__current:after {

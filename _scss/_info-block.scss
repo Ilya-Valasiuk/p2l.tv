@@ -50,7 +50,13 @@
         text-transform: uppercase;
         background-color: $logoColor;
         border-radius: 25px;
+        position: relative;
         color: $headerTextColor;
+        transition: all 0.2s ease;
+
+        &:hover {
+            background: #c0d47f;
+        }
     }
 
 }
@@ -125,12 +131,12 @@
         }
 
         &__headline {
-            margin-bottom: 40px;
+            margin-bottom: 35px;
             font-size: 36px;
             font-weight: 500;
         }
         &__copy {
-            margin-bottom: 55px;
+            margin-bottom: 20px;
             font-size: 18px;
             line-height: 30px;
         }
@@ -142,6 +148,7 @@
 
         &__button {
             width: 195px;
+            margin-top: 15px;
             padding: 22px 0 20px;
             font-size: 20px;
             text-align: center;
