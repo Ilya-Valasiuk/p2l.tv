@@ -37,11 +37,11 @@
 
         <ul class="mobile-nav__language-list">
             {% if page.lang == 'eng' %}
-                <li class="mobile-nav__language-item language-item lang--current"><a href="/index">ENG</a></li>
-                <li class="mobile-nav__language-item language-item"><a href="/index-ru">RUS</a></li>
+                <li class="mobile-nav__language-item language-item lang--current"><a href="{{ site.url }}/index">ENG</a></li>
+                <li class="mobile-nav__language-item language-item"><a href="{{ site.url }}/index-ru">RUS</a></li>
             {% else %}
-                <li class="mobile-nav__language-item language-item"><a href="/index">ENG</a></li>
-                <li class="mobile-nav__language-item language-item lang--current"><a href="/index-ru">RUS</a></li>
+                <li class="mobile-nav__language-item language-item"><a href="{{ site.url }}/index">ENG</a></li>
+                <li class="mobile-nav__language-item language-item lang--current"><a href="{{ site.url }}/index-ru">RUS</a></li>
             {% endif %}
         </ul>
 

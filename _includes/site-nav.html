@@ -56,11 +56,11 @@
                     {% endif %}
                     <ul class="language__list">
                         {% if page.lang == 'eng' %}
-                            <li class="language__item language__item--current"><a href="/index">ENG</a></li>
-                            <li class="language__item"><a href="/index-ru">RUS</a></li>
+                            <li class="language__item language__item--current"><a href="{{ site.url }}/index">ENG</a></li>
+                            <li class="language__item"><a href="{{ site.url }}/index-ru">RUS</a></li>
                         {% else %}
-                            <li class="language__item"><a href="/index">ENG</a></li>
-                            <li class="language__item language__item--current"><a href="/index-ru">RUS</a></li>
+                            <li class="language__item"><a href="{{ site.url }}/index">ENG</a></li>
+                            <li class="language__item language__item--current"><a href="{{ site.url }}/index-ru">RUS</a></li>
                         {% endif %}
                     </ul>
                 </li>
