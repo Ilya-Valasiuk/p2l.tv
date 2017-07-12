@@ -4,7 +4,7 @@
         <div class="site-nav__logo-container">
             <span class="site-nav__trigger nav-trigger"></span>
 
-            <a class="site-nav__logo " href="#">
+            <a class="site-nav__logo " data-scroll-to="1" href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" width="180" height="32" class="site-nav__logo-img svg">
                     <defs>
                         <linearGradient id="a1" x1="0%" y1="0%">
@@ -49,10 +49,19 @@
                     <a href="#contact-us" class="site-nav__link site-nav__map" data-scroll-to="5">Contact us</a>
                 </li>
                 <li class="site-nav__item language">
-                    <span class="language__current">ENG</span>
+                    {% if page.lang == 'eng' %}
+                        <span class="language__current">ENG</span>
+                    {% else %}
+                        <span class="language__current">RUS</span>
+                    {% endif %}
                     <ul class="language__list">
-                        <li class="language__item language__item--current"><a href="#">ENG</a></li>
-                        <li class="language__item"><a href="#">RUS</a></li>
+                        {% if page.lang == 'eng' %}
+                            <li class="language__item language__item--current"><a href="/index">ENG</a></li>
+                            <li class="language__item"><a href="/index-ru">RUS</a></li>
+                        {% else %}
+                            <li class="language__item"><a href="/index">ENG</a></li>
+                            <li class="language__item language__item--current"><a href="/index-ru">RUS</a></li>
+                        {% endif %}
                     </ul>
                 </li>
             </ul>

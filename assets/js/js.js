@@ -191,16 +191,19 @@
     }
 
     function addHandlerForNavigation() {
-        var navItems = globalProp.siteNav.find("a[data-scroll-to]");
-        navItems.on('click', function (e) {
-            e.preventDefault();
-            globalProp.currentSectionId = $(this).data('scrollTo');
-            if (+globalProp.siteNav.attr('data-for-id') === globalProp.currentSectionId) {
-                return false;
-            }
+        globalProp.siteNav
+            .find("a[data-scroll-to]")
+            .add('.footer-nav a[data-scroll-to]')
+            .on('click', function (e) {
+                e.preventDefault();
+                if ($(window).width() < 1024) return;
+                globalProp.currentSectionId = $(this).data('scrollTo');
+                if (+globalProp.siteNav.attr('data-for-id') === globalProp.currentSectionId) {
+                    return false;
+                }
 
-            showNewSection(globalProp.currentSectionId);
-        });
+                showNewSection(globalProp.currentSectionId);
+            });
     }
 
     addHandlerForNavigation();

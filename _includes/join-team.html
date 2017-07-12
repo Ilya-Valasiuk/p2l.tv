@@ -4,14 +4,15 @@
     <div class="section-wrapper join-wrapper">
 
         <div class="join-team__block">
-            <h3 class="join-team__headline">Join the team</h3>
-            <p class="join-team__copy">Welcome to our creative teams based in London, Los Angeles and San Francisco. We always need in young, talented and smart people.</p>
+            <h3 class="join-team__headline">{{ site.join_team[page.lang]}}</h3>
+            <p class="join-team__copy">{{ site.join_team_text[page.lang]}}</p>
+            <p class="join-team__copy">{{ site.join_team_text1[page.lang]}}</p>
             
             <div class="selection-block">
 
                 <ul class="job-selection">
                     <li class="job-selection__item selection job-location">
-                        <a htef="#" class="job-location__current job-selection__current"> ALL Locations</a> 
+                        <a htef="#" class="job-location__current job-selection__current">{{ site.all_locations[page.lang]}}</a> 
                         <ul class="job-location__list selection__list">
                             <li>
                                 <a htef="#" class="job-location__item selection__item selection__item-all">All categories</a>
@@ -26,7 +27,7 @@
                     </li>
 
                     <li class="job-selection__item job-categories selection">
-                        <a htef="#" class="job-categories__current job-selection__current"> ALL categories</a> 
+                        <a htef="#" class="job-categories__current job-selection__current">{{ site.all_categories[page.lang]}}</a> 
                         <ul class="job-categories__list selection__list">
                             <li>
                                 <a htef="#" class="job-categories__item selection__item selection__item-all">All categories</a>

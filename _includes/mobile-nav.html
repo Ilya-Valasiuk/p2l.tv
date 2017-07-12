@@ -36,8 +36,13 @@
         </ul>
 
         <ul class="mobile-nav__language-list">
-            <li class="mobile-nav__language-item language-item lang--current">ENG</li>
-            <li class="mobile-nav__language-item language-item">RUS</li>
+            {% if page.lang == 'eng' %}
+                <li class="mobile-nav__language-item language-item lang--current"><a href="/index">ENG</a></li>
+                <li class="mobile-nav__language-item language-item"><a href="/index-ru">RUS</a></li>
+            {% else %}
+                <li class="mobile-nav__language-item language-item"><a href="/index">ENG</a></li>
+                <li class="mobile-nav__language-item language-item lang--current"><a href="/index-ru">RUS</a></li>
+            {% endif %}
         </ul>
 
         <ul class="mobile-nav__shared shared">
