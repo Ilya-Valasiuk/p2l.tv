@@ -66,25 +66,39 @@
         }
     }
 
-    $('.mobile-nav__list').on('click touch', '.mobile-nav__link', function(event) {
-        event.preventDefault();
-        $('.mobile-nav').toggleClass('show-flex');
-        toggleModalWindowVisibility(this);
+    // $('.mobile-nav__list').on('click touch', '.mobile-nav__link', function(event) {
+    //     event.preventDefault();
+    //     $('.mobile-nav').toggleClass('show-flex');
+    //     toggleModalWindowVisibility(this);
 
-        var blockName = $(this).data('block');
-        var scrollPosition = $('.main-section.' + blockName).offset().top;
-        $(window).scrollTop(scrollPosition - 65);
-    });
+    //     var blockName = $(this).data('block');
+    //     var scrollPosition = $('.main-section.' + blockName).offset().top;
+    //     $(window).scrollTop(scrollPosition - 65);
+    // });
 
-    $('.footer-nav__list').on('click touch', '.footer-nav__link',  function(event) {
+    // $('.footer-nav__list').on('click touch', '.footer-nav__link',  function(event) {
+    //     if ($(window).width() < 1024) {
+    //         event.preventDefault();
+
+    //         var blockName = $(this).data('block');
+    //         var scrollPosition = $('.main-section.' + blockName).offset().top;
+    //         $(window).scrollTop(scrollPosition - 65);
+    //     }
+    // });
+
+    $('.mobile-nav__link, .footer-nav__link, .footer-nav__logo, .info-block__button, .header__scroll').on('click touch', function () {
         if ($(window).width() < 1024) {
             event.preventDefault();
+
+            if ($('.mobile-nav').hasClass('show-flex')) {
+                $('.mobile-nav').toggleClass('show-flex');
+                toggleModalWindowVisibility(this);
+            }
 
             var blockName = $(this).data('block');
             var scrollPosition = $('.main-section.' + blockName).offset().top;
             $(window).scrollTop(scrollPosition - 65);
         }
-
     });
 
 
@@ -199,6 +213,8 @@
     function addHandlerForNavigation() {
         globalProp.siteNav
             .find("a[data-scroll-to]")
+            .add('.header__scroll')
+            .add('.info-block__button')
             .add('.footer-nav a[data-scroll-to]')
             .on('click', function (e) {
                 e.preventDefault();
@@ -233,6 +249,20 @@
         }
 
     }
+
+
+    window.addEventListener("swu", function () {
+        if (globalProp.currentSectionId  < globalProp.sections.length ) {
+            showNewSection(  ++globalProp.currentSectionId);
+        }
+    }, false);
+
+    window.addEventListener("swd", function () {
+        if (globalProp.currentSectionId  > 1 ) {
+            showNewSection( --globalProp.currentSectionId );
+        }
+    }, false);
+    
 
     function showNewSection(newSectionId) {
         globalProp.isAnimation = true;

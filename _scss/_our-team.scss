@@ -29,19 +29,11 @@
 
 .team__member-list {
     margin: 0 -7.5%;
-    // margin-bottom: 30px;
-    // overflow: hidden;
 
     ul {
         position: relative;
-        // width: 10000px;
         overflow: hidden;
         padding: 30px 0;
-        // height: 177px;
-        // height: 130px;
-        // display: flex;
-        // justify-content: space-around;
-        // align-items: center;
     }
 }
 
@@ -56,41 +48,18 @@
     overflow: visible;
 }
 
+.slick-slide {
+     &:focus {
+        outline: none;
+    }
+}
+
 .team__member-item {
     margin: 0 13px;
-    // border-radius: 50%;
-    // height: 100%;
-    // overflow: hidden;
-    // display: flex;
-    // align-items: center;
-    // float: left;
     transform: translate3d(0, 0, 0);
-    
-    // position: absolute;
 
     div {
-        // width: 65px;
-        // height: 65px;
         transition: all 0.4s linear;
-
-        .center & {
-            // width: 177px;
-            // height: 177px;
-        }
-
-        .small & {
-
-        }
-
-        .middle & {
-             width: 87px;
-            height: 87px;
-        }
-
-        .large & {
-             width: 126px;
-            height: 126px;
-        }
 
         &:before {
             content: "";
@@ -104,48 +73,12 @@
         }
     }
 
-    &.small {
-        div {
-
-        }
-        // transform: scale(1);
-        // margin-right: 50px 20px;
-    }
-
-    &.middle {
-        div {
-            width: 87px;
-            height: 87px;
-        }
-        
-        // transform: scale(1.35);
-        // margin-right: 55px;/
-    }
-    &.large {
-        div {
-            width: 126px;
-            height: 126px;
-        }
-        
-        // transform: scale(1.96);
-        // margin-right: 100px;
-    }
-
-    &.member--selected,
     &.slick-current {
         div {
-            // width: 177px;
-            // height: 177px;
-
             &:before {
                 background: transparent;
             }
-        }
-        
-        // transform: scale(2.72);
-        // margin-right: 100px;
-
-       
+        }       
     }
 }
 
@@ -195,14 +128,10 @@
 
 .member-info__list {
     height: 100%;
-    // width: 100%;
     overflow: hidden;
     position: relative;
 }
 .member-info__item {
-    // position: absolute;
-    // width: 100%;
-    // height: 100%;
     padding: 20px 0;
     line-height: 20px;
     font-size: 14px;
@@ -246,8 +175,6 @@
         height: 255px;
     }
     .team {
-        //padding: 1px 45px;
-
         &__headline {
             margin-bottom: 40px;
             font-size: 36px;
@@ -343,24 +270,12 @@
         
     }
 
+    .slick-slide {
 
-    // /.team-wrapper {
-    //    display: flex;
-    //    flex-direction: column;
-    //    justify-content: center;
-    //}
-    //
-    //.team {
-    //    margin: 0;
-    //
-    //    &__block {
-    //        margin: 0 90px 20px;
-    //        display: flex;
-    //        flex-direction: column
-    //    }
-    //
-    //
-    //}
+        .team__member-list & {
+            cursor: pointer;
+        }
+    }
 }
 
 
@@ -371,7 +286,6 @@
 @media only screen and (min-width: $large2x) {
 
     .team {
-        //padding: 60px 0 30px;
         margin: 0;
 
         &__block {
@@ -389,24 +303,4 @@
 
     }
 
-}
-
-.slick-current {
-    // width: 177px;
-    // height: 177px;
-    // margin: 0 15px;
-    // div {
-    // transform: scale(2.75);
-    //    width: 180px;
-    //    height: 180px;
-    // }
-
-    &:before {
-        background: transparent;
-    }
-    
-}
-
-.owl-stage {
-    width: 10000px !important;
 }
