@@ -233,14 +233,18 @@
 
 
     window.addEventListener("swu", function () {
-        if (globalProp.currentSectionId  < globalProp.sections.length ) {
-            showNewSection(  ++globalProp.currentSectionId);
+        if ($(window).width() >= 1024) {
+            if (globalProp.currentSectionId  < globalProp.sections.length ) {
+                showNewSection(  ++globalProp.currentSectionId);
+            }
         }
     }, false);
 
     window.addEventListener("swd", function () {
-        if (globalProp.currentSectionId  > 1 ) {
-            showNewSection( --globalProp.currentSectionId );
+        if ($(window).width() >= 1024) {
+            if (globalProp.currentSectionId  > 1 ) {
+                showNewSection( --globalProp.currentSectionId );
+            }
         }
     }, false);
     
