@@ -493,7 +493,8 @@
 
     .site-nav[data-for-id='5'] {
 
-        transform: translateZ(-5em);
+        transform: translate3d(0,0,0);
+        -webkit-transform: translate3d(0,0,0);
         visibility: visible;
 
         .site-nav__logo-img path {
