@@ -81,6 +81,9 @@
         background: #fff;
         box-shadow: 0 0 49px 0 rgba(0,0,0,0.21);
         z-index: 2;
+        max-height: 200px;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
     }
     &__item {
         box-sizing: border-box;

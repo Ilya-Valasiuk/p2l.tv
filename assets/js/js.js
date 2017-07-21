@@ -247,6 +247,10 @@
             }
         }
     }, false);
+
+    $('.selection__list').on('wheel', function(e) {
+        e.stopPropagation();
+    });
     
 
     function showNewSection(newSectionId) {
