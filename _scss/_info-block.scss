@@ -130,7 +130,7 @@
         }
 
         &__headline {
-            margin-bottom: 35px;
+            margin-bottom: 30px;
             font-size: 36px;
             font-weight: 500;
         }
@@ -143,6 +143,10 @@
          &__copy-bold {
             font-size: 18px;
             line-height: 30px;
+        }
+
+        &__icon {
+            margin-bottom: 20px;
         }
 
         &__button {
@@ -171,6 +175,14 @@
             max-width: 450px;
             margin: 150px 0 160px 90px;
             padding-bottom: 0;
+        }
+
+        &__headline {
+            margin-bottom: 35px;
+        }
+
+        &__icon {
+            margin-bottom: 45px;
         }
     }
 }
