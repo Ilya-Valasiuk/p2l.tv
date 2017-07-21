@@ -134,15 +134,14 @@
             font-size: 36px;
             font-weight: 500;
         }
-        &__copy {
-            margin-bottom: 20px;
+        &__copy,
+        &__copy-bold {
             font-size: 16px;
             line-height: 25px;
         }
 
-         &__copy-bold {
-            font-size: 16px;
-            line-height: 25px;
+        &__copy {
+            margin-bottom: 20px;
         }
 
         &__icon {
@@ -174,6 +173,12 @@
         &__container {
             margin: 150px 0 160px 90px;
             padding-bottom: 0;
+        }
+
+        &__copy,
+        &__copy-bold {
+            font-size: 18px;
+            line-height: 30px;
         }
 
         &__headline {
