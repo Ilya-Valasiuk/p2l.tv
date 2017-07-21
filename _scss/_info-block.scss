@@ -124,8 +124,8 @@
     .info-block {
 
         &__container {
-            max-width: 490px;
-            // margin-left: 40px;
+            max-width: 450px;
+            margin-left: 40px;
             padding-bottom: 0;
         }
 
@@ -136,13 +136,13 @@
         }
         &__copy {
             margin-bottom: 20px;
-            font-size: 18px;
-            line-height: 30px;
+            font-size: 16px;
+            line-height: 25px;
         }
 
          &__copy-bold {
-            font-size: 18px;
-            line-height: 30px;
+            font-size: 16px;
+            line-height: 25px;
         }
 
         &__icon {
@@ -172,7 +172,6 @@
 
     .info-block {
         &__container {
-            max-width: 450px;
             margin: 150px 0 160px 90px;
             padding-bottom: 0;
         }
