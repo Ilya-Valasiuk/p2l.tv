@@ -212,6 +212,7 @@
     addHandlerForNavigation();
 
     function onWheel(e) {
+        console.log('2')
         if (globalProp.isAnimation) return;
         if ($(window).width() >= 1024) {
             e = e || window.event;
@@ -249,6 +250,8 @@
     }, false);
 
     $('.selection__list').on('wheel', function(e) {
+        console.log('1')
+        // e.preventDefault();
         e.stopPropagation();
     });
     
