@@ -229,6 +229,15 @@
         flex-direction: column;
         justify-content: center;
 
+        &__headline {
+            margin-bottom: 10px;
+        }
+
+        &-copy {
+            font-size: 16px;
+            line-height: 25px;
+        }
+
         &__member-block {
             padding: 0 40px;
         }
@@ -236,6 +245,10 @@
 
     .member-info__container {
         padding: 0 40px;
+    }
+
+    .team__member-list {
+        padding: 0 0 10px 0;
     }
 
 
@@ -288,6 +301,10 @@
     .team {
         margin: 0;
 
+        &__headline {
+            margin-bottom: 40px;
+        }
+
         &__block {
             display: flex;
             flex-direction: column
@@ -301,6 +318,15 @@
             padding: 0 90px;
         }
 
+        &-copy {
+            font-size: 18px;
+            line-height: 30px;
+        }
+
+    }
+
+    .team__member-list {
+        padding: 20px 0;
     }
 
 }
