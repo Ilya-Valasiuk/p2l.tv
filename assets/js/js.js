@@ -94,7 +94,7 @@
     //add fixed nav
 
     $(window).on('scroll', function (event) {
-        if ($(window).width() <= '1024') {
+        if ($(window).width() < '1024') {
             if ($(window).scrollTop() <= 0) {
                 $('.site-nav').removeClass('fixed-nav');
             } else {
