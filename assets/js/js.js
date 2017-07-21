@@ -212,7 +212,6 @@
     addHandlerForNavigation();
 
     function onWheel(e) {
-        console.log('2')
         if (globalProp.isAnimation) return;
         if ($(window).width() >= 1024) {
             e = e || window.event;
@@ -233,7 +232,7 @@
     }
 
 
-    window.addEventListener("swu", function () {
+    window.addEventListener('swu', function () {
         if ($(window).width() >= 1024 && !$('body').hasClass('fixed')) {
             if (globalProp.currentSectionId  < globalProp.sections.length ) {
                 showNewSection(  ++globalProp.currentSectionId);
@@ -241,7 +240,7 @@
         }
     }, false);
 
-    window.addEventListener("swd", function () {
+    window.addEventListener('swd', function () {
         if ($(window).width() >= 1024 && !$('body').hasClass('fixed')) {
             if (globalProp.currentSectionId  > 1 ) {
                 showNewSection( --globalProp.currentSectionId );
@@ -249,9 +248,11 @@
         }
     }, false);
 
+    $('.selection__list').on('swu swd', function(e) {
+        e.stopPropagation();
+    });
+
     $('.selection__list').on('wheel', function(e) {
-        console.log('1')
-        // e.preventDefault();
         e.stopPropagation();
     });
     
