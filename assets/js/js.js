@@ -233,7 +233,7 @@
 
 
     window.addEventListener("swu", function () {
-        if ($(window).width() >= 1024) {
+        if ($(window).width() >= 1024 && !$('body').hasClass('fixed')) {
             if (globalProp.currentSectionId  < globalProp.sections.length ) {
                 showNewSection(  ++globalProp.currentSectionId);
             }
@@ -241,7 +241,7 @@
     }, false);
 
     window.addEventListener("swd", function () {
-        if ($(window).width() >= 1024) {
+        if ($(window).width() >= 1024 && !$('body').hasClass('fixed')) {
             if (globalProp.currentSectionId  > 1 ) {
                 showNewSection( --globalProp.currentSectionId );
             }

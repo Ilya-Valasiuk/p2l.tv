@@ -289,6 +289,15 @@
             cursor: pointer;
         }
     }
+
+    .member-info__headline {
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+    }
+
+    .member-info__copy {
+        line-height: 26px;
+    }
 }
 
 
@@ -323,6 +332,15 @@
             line-height: 30px;
         }
 
+    }
+
+    .member-info__headline {
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+
+    .member-info__copy {
+        line-height: 30px;
     }
 
     .team__member-list {
