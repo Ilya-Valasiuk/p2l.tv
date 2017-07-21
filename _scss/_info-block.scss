@@ -124,8 +124,8 @@
     .info-block {
 
         &__container {
-            max-width: 450px;
-            margin-left: 40px;
+            max-width: 490px;
+            // margin-left: 40px;
             padding-bottom: 0;
         }
 
@@ -168,6 +168,7 @@
 
     .info-block {
         &__container {
+            max-width: 450px;
             margin: 150px 0 160px 90px;
             padding-bottom: 0;
         }
