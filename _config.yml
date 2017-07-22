@@ -62,4 +62,41 @@ all_categories:
   eng: All Categories
   ru: Все категории
 
+dmitryy_chirun_name:
+  eng: Dmitriy Chirun
+  ru: Дмитрий Чирун
+
+dmitryy_chirun_title:
+  eng: CTO
+  ru: CTO
+
+dmitryy_chirun_descr:
+  eng: 5 years of experience in gaming industry. Ex VP of Wargaming.
+  ru: Опыт в игровой индустрии более 10 лет. Экс вице-президент Wargaming.
+
+alexey_burdyko_name:
+  eng: Alexey Burdyko
+  ru: Алексей Бурдыко 
+
+alexey_burdyko_title:
+  eng: CEO and Founder
+  ru: CEO и основатель
+
+alexey_burdyko_descr:
+  eng: 10 years in esports and gaming. Founder of leading esports project in Russia and CIS – Game Show. Company valuation is equal to $36.8M (confirmed by Ernst and Young)
+  ru: Более 10 лет в киберспорте и гейминге:. Основатель проекта-лидера киберспорта в РФ и СНГ- Game Show. Оценка Ernst and Young $36,8M. 
+
+maria_mavreh_name:
+  eng: Maria Mavreh
+  ru: Мария Маврех
+
+maria_mavreh_title:
+  eng: Head Of Digital
+  ru: Head Of Digital
+
+maria_mavreh_descr:
+  eng: 10 years of management experience in digital and media industry
+  ru: Опыт в управлении диджитали и медиа агентствами более 10 лет. 
+
+
 closeicon: <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"><path fill="#6CC5A5" fill-rule="evenodd" d="M26.001 24.564l-1.246 1.437L13 14.337 1.245 26.001l-1.246-1.437L11.652 13-.001 1.436 1.245-.001 13 11.663 24.755-.001l1.246 1.437L14.347 13l11.654 11.564z"/></svg>
